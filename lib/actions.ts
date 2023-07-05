@@ -156,14 +156,14 @@ link:creatorId
 
 
  
-export const fetchAllProject = async (category?:string,endcursor?:string)=>{
+export const fetchAllProject = async (category?: string | null, endCursor?: string | null)=>{
 
     client.setHeader('x-api-key',apiKey)
 
 
 
 
-    return makeGraphQLRequest(projectsQuery,{category,endcursor})
+    return makeGraphQLRequest(projectsQuery,{category,endCursor})
 
 
 }

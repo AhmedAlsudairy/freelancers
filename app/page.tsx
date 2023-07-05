@@ -5,8 +5,8 @@ import ProjectCard from "@/components/ProjectCard";
 import { fetchAllProject } from "@/lib/actions";
 
 type SearchParams = {
-  category?: string | null;
-  endCursor?: string | null;
+  category?: string  |null ;
+  endCursor?: string |null;
 }
 
 type Props = {
