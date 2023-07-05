@@ -223,7 +223,7 @@ export const deleteProject =(id:string,token:string)=>{
 
 
 
-export const updateProject = async(form:ProjectForm,projectid:string,token:string)=>{
+export const updateProject = async(form:ProjectForm,projectId:string,token:string)=>{
 
 
 function isBase64DataUrl(value:string) {
@@ -261,7 +261,7 @@ if (imageUrl.url) {
 
 
 const variables ={
-id:projectid,
+id:projectId,
 input:updatedForm
 
 

@@ -52,9 +52,9 @@ const Home = async ({ searchParams: { category, endCursor } }: Props) => {
             id={node?.id}
             image={node?.image}
             title={node?.title}
-            name={node?.createdBy.name}
-            avatarUrl={node?.createdBy.avatarUrl}
-            userId={node?.createdBy.id}
+            name={node?.createdBy?.name}
+            avatarUrl={node?.createdBy?.avatarUrl}
+            userId={node?.createdBy?.id}
           />
         ))}
       </section>
