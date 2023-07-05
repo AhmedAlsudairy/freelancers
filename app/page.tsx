@@ -5,8 +5,8 @@ import ProjectCard from "@/components/ProjectCard";
 import { fetchAllProject } from "@/lib/actions";
 
 type SearchParams = {
-  category?: string ;
-  endCursor?: string ;
+  category?: string | null;
+  endCursor?: string | null;
 }
 
 type Props = {
@@ -24,6 +24,10 @@ type ProjectSearch = {
     };
   },
 }
+
+export const dynamic = 'force-dynamic';
+export const dynamicParams = true;
+export const revalidate = 0;
 
 
 const Home = async ({ searchParams: { category, endCursor } }: Props) => {
