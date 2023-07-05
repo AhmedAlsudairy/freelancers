@@ -1,3 +1,4 @@
+
 export const createProjectMutation = `
 	mutation CreateProject($input: ProjectCreateInput!) {
 		projectCreate(input: $input) {
@@ -5,7 +6,7 @@ export const createProjectMutation = `
 				id
 				title
 				description
-				 {
+				createdBy {
 					email
 					name
 				}
@@ -21,7 +22,7 @@ export const updateProjectMutation = `
 				id
 				title
 				description
-				 {
+				createdBy {
 					email
 					name
 				}
@@ -72,7 +73,7 @@ export const projectsQuery = `
           id
           image
           category
-           {
+          createdBy {
             id
             email
             name
@@ -94,7 +95,7 @@ export const getProjectByIdQuery = `
       liveSiteUrl
       githubUrl
       category
-       {
+      createdBy {
         id
         name
         email
