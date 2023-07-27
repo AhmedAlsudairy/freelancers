@@ -17,7 +17,7 @@ const session =await getCurrentUser();
       <div className="flex-1 flexStart gap-10">
 <Link href="/">
 
-<Image src="/logo.svg" width={115} height={43} alt="Flexibble" />
+<Image src="/logo.svg" width={100} height={39} alt="Flexibble" />
 
 </Link>
 <ul className="xl:flex hidden  text-small gap-7">
@@ -35,7 +35,7 @@ const session =await getCurrentUser();
 </ul>
       </div>
 
-      <div className="flexCenter gap-4">
+      <div className="flexCenter gap-6">
 
  {session?.user?(
 
@@ -43,7 +43,7 @@ const session =await getCurrentUser();
 <ProfileMenu session={session}/>
 
 
-<Link  className=' flexBetween bg-purple-500 text-white p-3 rounded-full hover:bg-purple-600 transition-all' href="/create-project"><FaPlus className='w-4 h-4' /> <span>Create post</span> </Link>
+<Link  className=' flexBetween gap-1 bg-purple-500 text-white p-2 rounded-full hover:bg-purple-600 transition-all' href="/create-project"><FaPlus className='w-4 h-4' /> <span>Create post</span> </Link>
 </>
 
 
