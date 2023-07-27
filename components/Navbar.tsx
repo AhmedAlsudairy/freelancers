@@ -6,6 +6,7 @@ import AuthProviders from './AuthProviders'
 import { getCurrentUser } from '@/lib/session'
 import { signOut } from 'next-auth/react'
 import ProfileMenu from './ProfileMenu'
+import { FaPlus } from 'react-icons/fa';
 
 const Navbar = async() => {
 
@@ -42,7 +43,7 @@ const session =await getCurrentUser();
 <ProfileMenu session={session}/>
 
 
-<Link href="/create-project"> Share work </Link>
+<Link  className=' flexBetween bg-purple-500 text-white p-3 rounded-full hover:bg-purple-600 transition-all' href="/create-project"><FaPlus className='w-4 h-4' /> <span>Create post</span> </Link>
 </>
 
 

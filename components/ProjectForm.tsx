@@ -135,16 +135,16 @@ const handleStateChange =(fieldName:string,value:string)=>{
 <div className="flexStart form_image-container">
 <label htmlFor="poster" className="flexCenter form_image-label ">
 
-{!form.image && 'Choose a poster for your project'}
+{!form.image && 'Choose a poster for your post'}
 
 
 </label>
 
 <input id="image" type="file" accept="image/*" required={type === 'create'} className="form_image-input" onChange={handleChangeImage} />
-{form?.image && (<Image  src={form?.image} className="sm:p-10  object-contain z-20" alt="Project poster" fill/>)}
+{form?.image && (<Image  src={form?.image} className="sm:p-10  object-contain z-20" alt="post poster" fill/>)}
 </div>
 <FormField  title="Title" state={form.title} placeholder="Flexibble" setState={(value)=>handleStateChange('title',value)}  />
-<FormField  title="Description" state={form.description} placeholder="Showcase and discover remarkable developer projects" setState={(value)=>handleStateChange('description',value)}  />
+<FormField  title="Description" state={form.description} placeholder="Post discriptions" setState={(value)=>handleStateChange('description',value)}  />
 <FormField type="url" title="Website url" state={form.liveSiteUrl} placeholder="https://example.com" setState={(value)=>handleStateChange('liveSiteUrl',value)}  />
 <FormField type="url" title="Github Url" state={form.githubUrl} placeholder="https://github.com/example" setState={(value)=>handleStateChange('githubUrl',value)}  />
 

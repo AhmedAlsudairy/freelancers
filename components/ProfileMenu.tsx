@@ -18,8 +18,8 @@ const ProfileMenu = ({ session }: { session: SessionInterface }) => {
                     {session?.user?.image && (
                         <Image
                             src={session.user.image}
-                            width={40}
-                            height={40}
+                            width={55}
+                            height={55}
                             className="rounded-full"
                             alt="user profile image"
                         />
