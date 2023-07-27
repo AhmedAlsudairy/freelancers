@@ -13,7 +13,7 @@ const Navbar = async() => {
 const session =await getCurrentUser();
 
   return (
-    <nav className='flexBetween  navbar'>
+    <nav className='flexBetween navbar gap-7'>
       <div className="flex-1 flexStart gap-10">
 <Link href="/">
 
@@ -43,7 +43,7 @@ const session =await getCurrentUser();
 <ProfileMenu session={session}/>
 
 
-<Link  className=' flexBetween gap-1 bg-purple-500 text-white p-2 rounded-full hover:bg-purple-600 transition-all' href="/create-project"><FaPlus className='w-4 h-4' /> <span>Create post</span> </Link>
+<Link  className=' flexBetween gap-1 bg-purple-500 text-white p-2 rounded-full hover:bg-purple-600 transition-all' href="/create-project"><FaPlus className='w-2 h-2' /> <span>Create post</span> </Link>
 </>
 
 
