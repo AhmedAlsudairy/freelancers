@@ -10,52 +10,40 @@ import { FaPlus } from 'react-icons/fa';
 
 const Navbar = async() => {
 
-const session =await getCurrentUser();
+  const session = await getCurrentUser();
 
   return (
-    <nav className='flexBetween navbar gap-7'>
+    <nav className='flexBetween navbar space-x-6 '>
       <div className="flex-1 flexStart gap-10">
-<Link href="/">
-
-<Image src="/logo.svg" width={100} height={39} alt="Flexibble" />
-
-</Link>
-<ul className="xl:flex hidden  text-small gap-7">
-
-{NavLinks.map((link)=>(
-
-<Link href={link.href} key={link.key}>
-
-    {link.text}
-</Link>
-
-))}
-
-
-</ul>
+        <Link href="/">
+          <Image src="/logo.svg" width={69} height={39} alt="Flexibble" />
+        </Link>
+        <ul className="xl:flex hidden text-small gap-7">
+          {NavLinks.map((link) => (
+            <Link href={link.href} key={link.key}>
+              {link.text}
+            </Link>
+          ))}
+        </ul>
       </div>
-
-      <div className="flexCenter gap-6">
-
- {session?.user?(
-
-<>
-<ProfileMenu session={session}/>
-
-
-<Link  className=' flexBetween gap-1 bg-purple-500 text-white p-2 rounded-full hover:bg-purple-600 transition-all' href="/create-project"><FaPlus className='w-2 h-2' /> <span>Create post</span> </Link>
-</>
-
-
- ):(
-
-<AuthProviders/>
-
- )}
-
+  
+      {/* Use Tailwind CSS to add constant space between the two div elements */}
+      <div className="flexCenter  gap-3">
+        {session?.user ? (
+          <>
+            <ProfileMenu session={session} />
+            <Link className='flexBetween gap-1 bg-purple-500 text-white p-2 rounded-full hover:bg-purple-600 transition-all' href="/create-project">
+              <FaPlus className='w-3 h-3' /> <span>Create post</span>
+            </Link>
+          </>
+        ) : (
+          <AuthProviders/>
+        )}
       </div>
     </nav>
-  )
+  );
+  
+  
 }
 
 export default Navbar
